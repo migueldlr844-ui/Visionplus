@@ -6,490 +6,501 @@
 <meta name="description" content="VISION+ STORE - Votre revendeur officiel CANAL+ au Cameroun. Décodeurs, abonnements, installation à domicile. Paiement Cash, Orange Money, MTN Mobile Money.">
 <meta name="keywords" content="CANAL+ Cameroun, décodeur CANAL+, abonnement CANAL+, VISION+ STORE, installation CANAL+, Yaoundé">
 <meta property="og:title" content="VISION+ STORE - Revendeur CANAL+ au Cameroun">
-<meta property="og:description" content="Tout ce que vous cherchez, nous l'avons. Décodeurs, bouquets CANAL+, installation à domicile.">
+<meta property="og:description" content="Tout ce que vous cherchez, nous l'avons.">
 <meta property="og:image" content="https://i.ibb.co/5gtmLLSL/B6-FDC077-2-B53-4-F93-8161-36062-EE5-DC6-A.jpg">
 <title>VISION+ STORE | Revendeur CANAL+ au Cameroun</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --black: #050505;
-    --deep: #0a0a0a;
-    --card: #111111;
-    --card2: #161616;
-    --gold: #F5C518;
-    --gold2: #FFD700;
-    --gold-dark: #C9A000;
-    --white: #FFFFFF;
-    --gray: #888888;
-    --border: rgba(245,197,24,0.15);
-    --glow: 0 0 20px rgba(245,197,24,0.4);
-    --glow2: 0 0 40px rgba(245,197,24,0.2);
-  }
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Exo 2', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; }
+/* ═══════════════════════════════════════════
+   ROOT & RESET
+═══════════════════════════════════════════ */
+:root {
+  --black:#050505; --deep:#0a0a0a; --card:#111111; --card2:#161616;
+  --gold:#F5C518; --gold2:#FFD700; --white:#FFFFFF; --gray:#888888;
+  --border:rgba(245,197,24,0.15);
+  --glow:0 0 20px rgba(245,197,24,0.45);
+  --glow2:0 0 50px rgba(245,197,24,0.22);
+  --glow3:0 0 80px rgba(245,197,24,0.35);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Exo 2',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--black)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+body::before{content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;opacity:.4}
 
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--black); }
-  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+/* ═══════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;height:70px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(5,5,5,.92);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);transition:all .3s}
+nav.scrolled{background:rgba(5,5,5,.98);border-bottom-color:rgba(245,197,24,.3)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-img{width:44px;height:44px;border-radius:10px;object-fit:cover;
+  border:1px solid rgba(245,197,24,.4);box-shadow:0 0 12px rgba(245,197,24,.2)}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-main{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--white)}
+.logo-main span{color:var(--gold)}
+.logo-sub{font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:3px;color:var(--gray);text-transform:uppercase}
+.nav-links{display:flex;gap:8px;list-style:none}
+.nav-links a{color:var(--gray);text-decoration:none;font-family:'Rajdhani',sans-serif;
+  font-weight:600;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
+  padding:6px 14px;border-radius:4px;transition:all .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:50%;right:50%;height:1px;background:var(--gold);transition:all .3s}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{left:14px;right:14px}
+.nav-cta{background:var(--gold)!important;color:var(--black)!important;font-weight:700!important;border-radius:4px}
+.nav-cta:hover{background:var(--gold2)!important;box-shadow:var(--glow)}
+.nav-cta::after{display:none!important}
 
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 9999; opacity: 0.4;
-  }
+/* ── HAMBURGER (animated X) ── */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.hamburger span{display:block;width:25px;height:2px;background:var(--gold);border-radius:2px;transition:transform .35s ease, opacity .25s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    padding: 0 5%; height: 70px;
-    display: flex; align-items: center; justify-content: space-between;
-    background: rgba(5,5,5,0.92); backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border); transition: all 0.3s;
-  }
-  nav.scrolled { background: rgba(5,5,5,0.98); border-bottom-color: rgba(245,197,24,0.3); }
+/* MOBILE MENU */
+.mobile-menu{display:none;position:fixed;inset:70px 0 0 0;
+  background:rgba(5,5,5,.98);backdrop-filter:blur(20px);z-index:999;
+  flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:40px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:4px;color:var(--white);text-decoration:none;transition:color .2s}
+.mobile-menu a:hover{color:var(--gold)}
 
-  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .logo-img {
-    width: 44px; height: 44px; border-radius: 10px;
-    object-fit: cover; border: 1px solid rgba(245,197,24,0.4);
-    box-shadow: 0 0 12px rgba(245,197,24,0.2);
-  }
-  .logo-text { display: flex; flex-direction: column; line-height: 1; }
-  .logo-main { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; color: var(--white); }
-  .logo-main span { color: var(--gold); }
-  .logo-sub { font-family: 'Rajdhani', sans-serif; font-size: 10px; letter-spacing: 3px; color: var(--gray); text-transform: uppercase; }
+/* ═══════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════ */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-cover{position:absolute;inset:0;
+  background-image:url('https://i.ibb.co/nN9JGTBF/C2-B94-B1-D-8-C3-C-49-FB-B143-90-D3-FCD3-F40-E.jpg');
+  background-size:cover;background-position:center;filter:brightness(.32)}
+.hero-cover-overlay{position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(5,5,5,.93) 0%,rgba(5,5,5,.5) 55%,rgba(5,5,5,.15) 100%),
+             linear-gradient(180deg,rgba(5,5,5,.3) 0%,transparent 40%,rgba(5,5,5,.6) 100%)}
+.hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(245,197,24,.04) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(245,197,24,.04) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse at 30% 50%,black 20%,transparent 70%)}
+.hero-content{position:relative;z-index:2;padding:90px 5% 60px;max-width:620px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;
+  background:rgba(245,197,24,.12);border:1px solid rgba(245,197,24,.35);
+  border-radius:50px;padding:6px 16px;font-family:'Rajdhani',sans-serif;
+  font-size:12px;font-weight:600;letter-spacing:2px;color:var(--gold);text-transform:uppercase;
+  margin-bottom:24px;animation:fadeInUp .6s both}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-logo-img{width:90px;height:90px;border-radius:16px;object-fit:cover;
+  border:2px solid rgba(245,197,24,.5);box-shadow:0 0 30px rgba(245,197,24,.3);
+  margin-bottom:20px;display:block;animation:fadeInUp .6s .05s both}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,7vw,90px);
+  line-height:.95;letter-spacing:2px;color:var(--white);margin-bottom:8px;animation:fadeInUp .6s .1s both}
+.hero-title span{color:var(--gold);display:block;text-shadow:var(--glow)}
+.hero-slogan{font-family:'Rajdhani',sans-serif;font-size:clamp(14px,2vw,18px);font-weight:500;
+  color:rgba(255,255,255,.65);letter-spacing:2px;margin-bottom:28px;text-transform:uppercase;
+  animation:fadeInUp .6s .2s both}
+.hero-slogan em{color:var(--gold);font-style:normal}
+.hero-desc{font-size:15px;line-height:1.7;color:rgba(255,255,255,.5);margin-bottom:36px;animation:fadeInUp .6s .3s both}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;animation:fadeInUp .6s .4s both}
+.hero-stats{display:flex;gap:32px;margin-top:44px;padding-top:28px;border-top:1px solid var(--border);animation:fadeInUp .6s .5s both}
+.stat{text-align:center}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--gold);line-height:1}
+.stat-label{font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gray);text-transform:uppercase}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
-  .nav-links { display: flex; gap: 8px; list-style: none; }
-  .nav-links a {
-    color: var(--gray); text-decoration: none;
-    font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 13px;
-    letter-spacing: 1.5px; text-transform: uppercase;
-    padding: 6px 14px; border-radius: 4px; transition: all 0.2s; position: relative;
-  }
-  .nav-links a::after {
-    content: ''; position: absolute; bottom: 0; left: 50%; right: 50%;
-    height: 1px; background: var(--gold); transition: all 0.3s;
-  }
-  .nav-links a:hover { color: var(--white); }
-  .nav-links a:hover::after { left: 14px; right: 14px; }
-  .nav-cta { background: var(--gold); color: var(--black) !important; font-weight: 700 !important; border-radius: 4px; }
-  .nav-cta:hover { background: var(--gold2); box-shadow: var(--glow); }
-  .nav-cta::after { display: none !important; }
+/* ═══════════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════════ */
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);
+  color:var(--black);font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:2px;text-transform:uppercase;text-decoration:none;
+  padding:14px 28px;border-radius:6px;border:none;cursor:pointer;transition:all .3s;
+  position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(45deg,transparent,rgba(255,255,255,.3),transparent);
+  transform:translateX(-100%);transition:transform .4s}
+.btn-primary:hover{background:var(--gold2);box-shadow:var(--glow),0 8px 30px rgba(245,197,24,.3);transform:translateY(-2px)}
+.btn-primary:hover::before{transform:translateX(100%)}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;
+  color:var(--white);font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:2px;text-transform:uppercase;text-decoration:none;
+  padding:13px 28px;border-radius:6px;border:1px solid rgba(255,255,255,.25);cursor:pointer;transition:all .3s}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
 
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
-  .hamburger span { width: 25px; height: 2px; background: var(--gold); border-radius: 2px; transition: all 0.3s; }
+/* ═══════════════════════════════════════════
+   SECTION COMMONS
+═══════════════════════════════════════════ */
+section{padding:90px 5%}
+.section-label{display:inline-flex;align-items:center;gap:8px;
+  font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;
+  color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+.section-label::before{content:'';width:24px;height:1px;background:var(--gold)}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,60px);
+  letter-spacing:2px;color:var(--white);line-height:1;margin-bottom:16px}
+.section-title span{color:var(--gold)}
+.section-desc{font-size:15px;color:rgba(255,255,255,.5);line-height:1.7;max-width:550px;margin-bottom:50px}
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh; position: relative;
-    display: flex; align-items: center; overflow: hidden;
-  }
+/* ═══════════════════════════════════════════
+   SERVICES
+═══════════════════════════════════════════ */
+#services{background:var(--deep)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:12px;
+  overflow:hidden;transition:all .4s;position:relative}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .4s}
+.service-card:hover{border-color:rgba(245,197,24,.35);transform:translateY(-6px);box-shadow:var(--glow2)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;filter:brightness(.85);transition:filter .4s}
+.service-card:hover .service-img{filter:brightness(1)}
+.service-body{padding:20px 22px 24px}
+.service-icon{width:42px;height:42px;background:rgba(245,197,24,.1);border:1px solid rgba(245,197,24,.2);
+  border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;
+  margin-bottom:14px;margin-top:-34px;position:relative;z-index:1;box-shadow:0 4px 12px rgba(0,0,0,.4)}
+.service-name{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;color:var(--white);letter-spacing:1px;margin-bottom:8px}
+.service-desc{font-size:13px;color:var(--gray);line-height:1.6}
 
-  .hero-cover {
-    position: absolute; inset: 0;
-    background-image: url('https://i.ibb.co/nN9JGTBF/C2-B94-B1-D-8-C3-C-49-FB-B143-90-D3-FCD3-F40-E.jpg');
-    background-size: cover; background-position: center;
-    filter: brightness(0.35);
-  }
-  .hero-cover-overlay {
-    position: absolute; inset: 0;
-    background:
-      linear-gradient(90deg, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.5) 55%, rgba(5,5,5,0.15) 100%),
-      linear-gradient(180deg, rgba(5,5,5,0.3) 0%, transparent 40%, rgba(5,5,5,0.6) 100%);
-  }
+/* ═══════════════════════════════════════════
+   OFFRES  ← FEATURED GLOW ANIMATION
+═══════════════════════════════════════════ */
+#offres{background:var(--black)}
+.offres-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.offre-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .4s;position:relative}
+.offre-card:hover{transform:translateY(-8px);border-color:rgba(245,197,24,.4);box-shadow:0 20px 60px rgba(0,0,0,.5),var(--glow2)}
 
-  .hero-grid {
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(245,197,24,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(245,197,24,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse at 30% 50%, black 20%, transparent 70%);
-  }
+/* ✨ FEATURED GLOW PULSE */
+.offre-card.featured{border-color:var(--gold);animation:featured-pulse 3s ease-in-out infinite}
+@keyframes featured-pulse{
+  0%,100%{box-shadow:0 0 20px rgba(245,197,24,.25),0 0 0 0 rgba(245,197,24,.15)}
+  50%{box-shadow:0 0 50px rgba(245,197,24,.5),0 0 30px 10px rgba(245,197,24,.1)}
+}
+.offre-card.featured .offre-name{text-shadow:0 0 16px rgba(245,197,24,.6)}
 
-  .hero-content {
-    position: relative; z-index: 2;
-    padding: 0 5%; max-width: 620px;
-    padding-top: 70px;
-  }
+.offre-badge-top{position:absolute;top:12px;right:12px;z-index:2;background:var(--gold);
+  color:var(--black);font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;
+  letter-spacing:2px;padding:4px 10px;border-radius:50px;text-transform:uppercase}
+.offre-img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;filter:brightness(.9);transition:filter .4s}
+.offre-card:hover .offre-img{filter:brightness(1.05)}
+.offre-header{padding:18px 22px 14px;border-bottom:1px solid var(--border)}
+.offre-name{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--gold);margin-bottom:4px}
+.offre-tagline{font-size:12px;color:var(--gray);font-family:'Rajdhani',sans-serif;letter-spacing:1px}
+.offre-price{padding:14px 22px;border-bottom:1px solid var(--border)}
+.price-amount{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--white);line-height:1}
+.price-currency{font-family:'Rajdhani',sans-serif;font-size:15px;color:var(--gold);font-weight:600}
+.price-period{font-size:12px;color:var(--gray);font-family:'Rajdhani',sans-serif}
+.offre-features{padding:16px 22px;list-style:none;display:flex;flex-direction:column;gap:9px}
+.offre-features li{font-size:13px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:10px}
+.offre-features li::before{content:'✓';color:var(--gold);font-weight:700;font-size:12px;min-width:16px}
+.offre-footer{padding:12px 22px 22px}
 
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(245,197,24,0.12); border: 1px solid rgba(245,197,24,0.35);
-    border-radius: 50px; padding: 6px 16px;
-    font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600;
-    letter-spacing: 2px; color: var(--gold); text-transform: uppercase;
-    margin-bottom: 24px; animation: fadeInUp 0.6s both;
-  }
-  .hero-badge::before {
-    content: ''; width: 6px; height: 6px;
-    background: var(--gold); border-radius: 50%; animation: blink 1.5s infinite;
-  }
-  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+/* Bouton "Voir les chaînes" */
+.btn-chains{display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;
+  background:transparent;color:var(--gold);font-family:'Rajdhani',sans-serif;
+  font-size:12px;font-weight:600;letter-spacing:1px;border:1px solid rgba(245,197,24,.3);
+  border-radius:4px;padding:6px 12px;cursor:pointer;transition:all .3s;width:100%;justify-content:center}
+.btn-chains:hover{background:rgba(245,197,24,.1)}
 
-  .hero-logo-img {
-    width: 90px; height: 90px; border-radius: 16px; object-fit: cover;
-    border: 2px solid rgba(245,197,24,0.5);
-    box-shadow: 0 0 30px rgba(245,197,24,0.3);
-    margin-bottom: 20px; display: block;
-    animation: fadeInUp 0.6s 0.05s both;
-  }
+/* ═══════════════════════════════════════════
+   SIMULATEUR DE TARIF
+═══════════════════════════════════════════ */
+#simulateur{background:var(--deep)}
+.sim-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.sim-panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px}
+.sim-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--white);margin-bottom:6px}
+.sim-sub{font-size:13px;color:var(--gray);margin-bottom:28px;line-height:1.5}
+.sim-row{margin-bottom:22px}
+.sim-row label{display:block;font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;
+  letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.sim-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sim-opt{padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;cursor:pointer;transition:all .3s;text-align:center;
+  font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;color:var(--gray)}
+.sim-opt:hover{border-color:rgba(245,197,24,.3);color:var(--white)}
+.sim-opt.active{border-color:var(--gold);color:var(--gold);background:rgba(245,197,24,.08);box-shadow:0 0 10px rgba(245,197,24,.15)}
+.sim-checkbox-row{display:flex;align-items:center;gap:12px;padding:12px;
+  background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);
+  border-radius:8px;margin-bottom:8px;cursor:pointer;transition:all .3s}
+.sim-checkbox-row:hover{border-color:rgba(245,197,24,.25)}
+.sim-checkbox-row input[type=checkbox]{accent-color:var(--gold);width:16px;height:16px;cursor:pointer}
+.sim-checkbox-row span{font-family:'Rajdhani',sans-serif;font-size:13px;color:rgba(255,255,255,.7);font-weight:600}
+.sim-checkbox-row .chip{margin-left:auto;background:rgba(245,197,24,.12);color:var(--gold);
+  font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;
+  padding:2px 8px;border-radius:50px;letter-spacing:1px}
 
-  .hero-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(52px, 7vw, 90px);
-    line-height: 0.95; letter-spacing: 2px; color: var(--white);
-    margin-bottom: 8px; animation: fadeInUp 0.6s 0.1s both;
-  }
-  .hero-title span { color: var(--gold); display: block; text-shadow: var(--glow); }
+.sim-result{background:var(--card);border:1px solid var(--gold);border-radius:16px;padding:32px;
+  position:sticky;top:80px}
+.sim-result-label{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+.sim-bouquet-name{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;
+  color:var(--white);margin-bottom:4px}
+.sim-total{font-family:'Bebas Neue',sans-serif;font-size:54px;color:var(--gold);line-height:1;
+  margin-bottom:4px;text-shadow:var(--glow)}
+.sim-total-label{font-size:13px;color:var(--gray);margin-bottom:20px}
+.sim-items{list-style:none;margin-bottom:24px;display:flex;flex-direction:column;gap:8px}
+.sim-items li{display:flex;justify-content:space-between;font-size:13px;
+  color:rgba(255,255,255,.6);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.sim-items li span{color:var(--gold);font-weight:600}
+.sim-wa-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;
+  background:#25D366;color:var(--white);font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:14px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;
+  padding:14px 28px;border-radius:8px;border:none;cursor:pointer;transition:all .3s}
+.sim-wa-btn:hover{background:#20bc5a;box-shadow:0 8px 30px rgba(37,211,102,.35);transform:translateY(-2px)}
 
-  .hero-slogan {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: clamp(14px, 2vw, 18px); font-weight: 500;
-    color: rgba(255,255,255,0.65); letter-spacing: 2px;
-    margin-bottom: 28px; text-transform: uppercase;
-    animation: fadeInUp 0.6s 0.2s both;
-  }
-  .hero-slogan em { color: var(--gold); font-style: normal; }
+/* ═══════════════════════════════════════════
+   BOUTIQUE
+═══════════════════════════════════════════ */
+#boutique{background:var(--black)}
+.boutique-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px}
+.product-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .4s}
+.product-card:hover{transform:translateY(-6px);border-color:rgba(245,197,24,.4);box-shadow:var(--glow2)}
+.product-img-wrap{width:100%;aspect-ratio:4/3;overflow:hidden;background:var(--card2);position:relative}
+.product-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.product-card:hover .product-img-wrap img{transform:scale(1.06)}
+.product-info{padding:18px 20px 20px}
+.product-name{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--white);letter-spacing:1px;margin-bottom:6px}
+.product-desc{font-size:12px;color:var(--gray);margin-bottom:14px;line-height:1.5}
+.product-price{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--gold);margin-bottom:14px}
 
-  .hero-desc {
-    font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.5);
-    margin-bottom: 36px; animation: fadeInUp 0.6s 0.3s both;
-  }
+/* ═══════════════════════════════════════════
+   ÉVÉNEMENTS SPORTIFS (FOMO)
+═══════════════════════════════════════════ */
+#sport{background:var(--deep)}
+.sport-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:36px}
+.live-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(220,50,50,.12);
+  border:1px solid rgba(220,50,50,.35);border-radius:50px;padding:6px 16px;
+  font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;
+  color:#ff4444;text-transform:uppercase}
+.live-badge::before{content:'';width:7px;height:7px;background:#ff4444;border-radius:50%;animation:blink 1s infinite}
+.sport-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.sport-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:all .4s;position:relative;overflow:hidden}
+.sport-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(245,197,24,.04),transparent 60%);pointer-events:none}
+.sport-card:hover{border-color:rgba(245,197,24,.3);transform:translateY(-4px)}
+.sport-date{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;
+  color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.sport-match{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--white);margin-bottom:6px}
+.sport-comp{font-size:12px;color:var(--gray);margin-bottom:14px}
+.sport-time-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(245,197,24,.1);
+  border:1px solid rgba(245,197,24,.25);border-radius:50px;padding:5px 12px;
+  font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;color:var(--gold)}
+.sport-canal{font-size:11px;color:var(--gray);margin-top:10px;font-family:'Rajdhani',sans-serif;letter-spacing:1px}
+.sport-urgency{background:rgba(220,50,50,.08);border:1px solid rgba(220,50,50,.2);
+  border-radius:10px;padding:16px 20px;margin-top:32px;display:flex;align-items:center;gap:16px}
+.sport-urgency-icon{font-size:28px}
+.sport-urgency p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.5}
+.sport-urgency strong{color:#ff6666}
 
-  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeInUp 0.6s 0.4s both; }
+/* ═══════════════════════════════════════════
+   AVIS CLIENTS
+═══════════════════════════════════════════ */
+#avis{background:var(--black)}
+.avis-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.avis-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;transition:all .4s;position:relative}
+.avis-card:hover{border-color:rgba(245,197,24,.3);transform:translateY(-4px)}
+.avis-wa-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;
+  padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.avis-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#25D366,#128c7e);
+  display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;
+  color:var(--white);font-family:'Bebas Neue',sans-serif;flex-shrink:0}
+.avis-name{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;color:var(--white);letter-spacing:1px}
+.avis-sub{font-size:11px;color:var(--gray)}
+.avis-wa-icon{margin-left:auto;font-size:20px;opacity:.5}
+.avis-stars{color:var(--gold);font-size:14px;margin-bottom:10px;letter-spacing:2px}
+.avis-text{font-size:14px;color:rgba(255,255,255,.7);line-height:1.65;font-style:italic}
+.avis-date{font-size:11px;color:var(--gray);margin-top:14px;font-family:'Rajdhani',sans-serif;letter-spacing:1px}
+.avis-bouquet{position:absolute;top:16px;right:16px;background:rgba(245,197,24,.1);
+  color:var(--gold);font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;
+  letter-spacing:1px;padding:3px 8px;border-radius:50px;border:1px solid rgba(245,197,24,.25)}
 
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: var(--gold); color: var(--black);
-    font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px;
-    letter-spacing: 2px; text-transform: uppercase; text-decoration: none;
-    padding: 14px 28px; border-radius: 6px; border: none; cursor: pointer;
-    transition: all 0.3s; position: relative; overflow: hidden;
-  }
-  .btn-primary::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-    transform: translateX(-100%); transition: transform 0.4s;
-  }
-  .btn-primary:hover { background: var(--gold2); box-shadow: var(--glow), 0 8px 30px rgba(245,197,24,0.3); transform: translateY(-2px); }
-  .btn-primary:hover::before { transform: translateX(100%); }
+/* ═══════════════════════════════════════════
+   INSTALLATION
+═══════════════════════════════════════════ */
+#installation{background:var(--deep)}
+.install-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.install-feature-img{width:100%;border-radius:16px;overflow:hidden;margin-bottom:32px;
+  border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.install-feature-img img{width:100%;display:block;object-fit:cover;aspect-ratio:16/10}
+.install-steps{display:flex;flex-direction:column;gap:20px}
+.install-step{display:flex;gap:18px;align-items:flex-start}
+.step-num{width:42px;height:42px;min-width:42px;background:rgba(245,197,24,.1);
+  border:1px solid rgba(245,197,24,.3);border-radius:8px;display:flex;align-items:center;
+  justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--gold)}
+.step-info h4{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--white);letter-spacing:1px;margin-bottom:3px}
+.step-info p{font-size:13px;color:var(--gray);line-height:1.5}
+.install-form{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:36px 32px}
+.form-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--white);margin-bottom:6px}
+.form-sub{font-size:13px;color:var(--gray);margin-bottom:28px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;
+  letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:8px;
+  padding:12px 16px;color:var(--white);font-family:'Exo 2',sans-serif;font-size:14px;
+  outline:none;transition:all .3s;appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:var(--gold);background:rgba(245,197,24,.03);box-shadow:0 0 0 3px rgba(245,197,24,.1)}
+.form-group select option{background:var(--card)}
+.form-group textarea{resize:vertical;min-height:80px}
 
-  .btn-secondary {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: transparent; color: var(--white);
-    font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px;
-    letter-spacing: 2px; text-transform: uppercase; text-decoration: none;
-    padding: 13px 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.25);
-    cursor: pointer; transition: all 0.3s;
-  }
-  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+/* ═══════════════════════════════════════════
+   PAIEMENT
+═══════════════════════════════════════════ */
+#paiement{background:var(--black)}
+.paiement-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-bottom:36px}
+.pay-card{background:var(--card);border:1px solid var(--border);border-radius:16px;
+  padding:32px 24px;text-align:center;transition:all .4s;position:relative;overflow:hidden}
+.pay-card:hover{border-color:rgba(245,197,24,.4);transform:translateY(-6px);box-shadow:var(--glow2)}
+.pay-icon{font-size:44px;margin-bottom:16px;display:block}
+.pay-name{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:1px;margin-bottom:8px}
+.pay-desc{font-size:13px;color:var(--gray);line-height:1.5}
+.pay-notice{background:rgba(245,197,24,.08);border:1px solid rgba(245,197,24,.2);
+  border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:16px}
+.pay-notice-icon{font-size:28px;min-width:28px}
+.pay-notice-text{font-size:14px;color:rgba(255,255,255,.7);line-height:1.6}
+.pay-notice-text strong{color:var(--gold)}
 
-  .hero-stats {
-    display: flex; gap: 32px; margin-top: 44px;
-    padding-top: 28px; border-top: 1px solid var(--border);
-    animation: fadeInUp 0.6s 0.5s both;
-  }
-  .stat { text-align: center; }
-  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--gold); line-height: 1; }
-  .stat-label { font-family: 'Rajdhani', sans-serif; font-size: 11px; letter-spacing: 2px; color: var(--gray); text-transform: uppercase; }
+/* ═══════════════════════════════════════════
+   FAQ
+═══════════════════════════════════════════ */
+#faq{background:var(--deep)}
+.faq-list{max-width:800px;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .3s}
+.faq-item.open{border-color:rgba(245,197,24,.35)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:18px 22px;cursor:pointer;transition:background .2s}
+.faq-q:hover{background:rgba(245,197,24,.03)}
+.faq-q-text{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--white);letter-spacing:.5px}
+.faq-icon{width:28px;height:28px;min-width:28px;background:rgba(245,197,24,.1);
+  border:1px solid rgba(245,197,24,.25);border-radius:50%;display:flex;
+  align-items:center;justify-content:center;font-size:16px;color:var(--gold);
+  transition:transform .35s;font-weight:700}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:rgba(245,197,24,.2)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{padding:0 22px 20px;font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;border-top:1px solid rgba(255,255,255,.06)}
 
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+/* ═══════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════ */
+#contact{background:var(--black)}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.contact-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  transition:all .3s;text-decoration:none;color:var(--white)}
+.contact-item:hover{border-color:rgba(245,197,24,.4);transform:translateX(6px)}
+.contact-item-icon{width:44px;height:44px;min-width:44px;background:rgba(245,197,24,.1);
+  border:1px solid rgba(245,197,24,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.contact-item-info h4{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;
+  letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:4px}
+.contact-item-info p{font-size:15px;color:var(--white)}
+.contact-item-info small{font-size:12px;color:var(--gray)}
+.contact-service-img{width:100%;border-radius:16px;overflow:hidden;border:1px solid var(--border);
+  margin-bottom:20px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.contact-service-img img{width:100%;display:block;object-fit:cover;aspect-ratio:16/9}
+.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.social-btn{display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px;background:var(--card);border:1px solid var(--border);border-radius:8px;
+  color:var(--gray);text-decoration:none;font-family:'Rajdhani',sans-serif;
+  font-size:13px;font-weight:600;letter-spacing:1px;transition:all .3s}
+.social-btn:hover{border-color:rgba(245,197,24,.4);color:var(--gold)}
 
-  /* ── SECTIONS ── */
-  section { padding: 90px 5%; }
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+footer{background:var(--card);border-top:1px solid var(--border);padding:50px 5% 30px}
+.footer-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand p{font-size:13px;color:var(--gray);line-height:1.7;margin:16px 0}
+.footer-col h4{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:13px;color:var(--gray);text-decoration:none;transition:color .2s}
+.footer-col ul a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-bottom p{font-size:12px;color:var(--gray)}
+.footer-bottom span{color:var(--gold)}
 
-  .section-label {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700;
-    letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px;
-  }
-  .section-label::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+/* ═══════════════════════════════════════════
+   WHATSAPP FLOAT
+═══════════════════════════════════════════ */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.wa-tooltip{background:var(--card);border:1px solid var(--border);border-radius:8px;
+  padding:10px 16px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;
+  color:var(--white);white-space:nowrap;opacity:0;transform:translateX(10px);
+  transition:all .3s;pointer-events:none}
+.wa-float:hover .wa-tooltip{opacity:1;transform:translateX(0)}
+.wa-btn{width:60px;height:60px;background:#25D366;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 4px 20px rgba(37,211,102,.4);animation:wa-pulse 2s ease-in-out infinite;transition:transform .2s}
+.wa-btn:hover{transform:scale(1.1)}
+@keyframes wa-pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 40px rgba(37,211,102,.7)}}
 
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(36px, 5vw, 60px); letter-spacing: 2px;
-    color: var(--white); line-height: 1; margin-bottom: 16px;
-  }
-  .section-title span { color: var(--gold); }
-  .section-desc { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 550px; margin-bottom: 50px; }
+/* ═══════════════════════════════════════════
+   MODAL (Chaînes + Général)
+═══════════════════════════════════════════ */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);
+  z-index:2000;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:var(--card);border:1px solid rgba(245,197,24,.3);border-radius:20px;
+  max-width:520px;width:100%;max-height:85vh;overflow-y:auto;padding:32px;position:relative;
+  animation:modalIn .3s ease}
+@keyframes modalIn{from{opacity:0;transform:scale(.92) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;
+  background:rgba(255,255,255,.08);border:none;border-radius:50%;cursor:pointer;
+  color:var(--white);font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.modal-close:hover{background:rgba(245,197,24,.2);color:var(--gold)}
+.modal-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--gold);margin-bottom:4px}
+.modal-sub{font-size:13px;color:var(--gray);margin-bottom:24px}
+.chains-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px}
+.chain-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:8px;padding:10px 8px;text-align:center;transition:all .3s;cursor:default}
+.chain-item:hover{border-color:rgba(245,197,24,.3);background:rgba(245,197,24,.05)}
+.chain-icon{font-size:22px;display:block;margin-bottom:5px}
+.chain-name{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;
+  color:rgba(255,255,255,.7);letter-spacing:.5px}
 
-  /* ── SERVICES ── */
-  #services { background: var(--deep); }
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+/* ═══════════════════════════════════════════
+   REVEAL ANIMATION
+═══════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
 
-  .service-card {
-    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-    overflow: hidden; transition: all 0.4s; position: relative;
-  }
-  .service-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    transform: scaleX(0); transition: transform 0.4s;
-  }
-  .service-card:hover { border-color: rgba(245,197,24,0.35); transform: translateY(-6px); box-shadow: var(--glow2); }
-  .service-card:hover::before { transform: scaleX(1); }
-
-  .service-img {
-    width: 100%; aspect-ratio: 16/9; object-fit: cover;
-    display: block; filter: brightness(0.85); transition: filter 0.4s;
-  }
-  .service-card:hover .service-img { filter: brightness(1); }
-
-  .service-body { padding: 20px 22px 24px; }
-  .service-icon {
-    width: 42px; height: 42px;
-    background: rgba(245,197,24,0.1); border: 1px solid rgba(245,197,24,0.2);
-    border-radius: 8px; display: flex; align-items: center; justify-content: center;
-    font-size: 20px; margin-bottom: 14px; margin-top: -34px; position: relative; z-index: 1;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  }
-  .service-name { font-family: 'Rajdhani', sans-serif; font-size: 17px; font-weight: 700; color: var(--white); letter-spacing: 1px; margin-bottom: 8px; }
-  .service-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
-
-  /* ── OFFRES ── */
-  #offres { background: var(--black); }
-  .offres-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-
-  .offre-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 16px; overflow: hidden; transition: all 0.4s; position: relative;
-  }
-  .offre-card:hover { transform: translateY(-8px); border-color: rgba(245,197,24,0.4); box-shadow: 0 20px 60px rgba(0,0,0,0.5), var(--glow2); }
-  .offre-card.featured { border-color: var(--gold); box-shadow: var(--glow2); }
-
-  .offre-badge-top {
-    position: absolute; top: 12px; right: 12px; z-index: 2;
-    background: var(--gold); color: var(--black);
-    font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 700;
-    letter-spacing: 2px; padding: 4px 10px; border-radius: 50px; text-transform: uppercase;
-  }
-
-  .offre-img {
-    width: 100%; aspect-ratio: 16/10; object-fit: cover;
-    display: block; filter: brightness(0.9); transition: filter 0.4s;
-  }
-  .offre-card:hover .offre-img { filter: brightness(1.05); }
-
-  .offre-header { padding: 18px 22px 14px; border-bottom: 1px solid var(--border); }
-  .offre-name { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 3px; color: var(--gold); margin-bottom: 4px; }
-  .offre-tagline { font-size: 12px; color: var(--gray); font-family: 'Rajdhani', sans-serif; letter-spacing: 1px; }
-
-  .offre-price { padding: 14px 22px; border-bottom: 1px solid var(--border); }
-  .price-amount { font-family: 'Bebas Neue', sans-serif; font-size: 38px; color: var(--white); line-height: 1; }
-  .price-currency { font-family: 'Rajdhani', sans-serif; font-size: 15px; color: var(--gold); font-weight: 600; }
-  .price-period { font-size: 12px; color: var(--gray); font-family: 'Rajdhani', sans-serif; }
-
-  .offre-features { padding: 16px 22px; list-style: none; display: flex; flex-direction: column; gap: 9px; }
-  .offre-features li { font-size: 13px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 10px; }
-  .offre-features li::before { content: '✓'; color: var(--gold); font-weight: 700; font-size: 12px; min-width: 16px; }
-  .offre-footer { padding: 12px 22px 22px; }
-
-  /* ── BOUTIQUE ── */
-  #boutique { background: var(--deep); }
-  .boutique-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
-
-  .product-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; overflow: hidden; transition: all 0.4s;
-  }
-  .product-card:hover { transform: translateY(-6px); border-color: rgba(245,197,24,0.4); box-shadow: var(--glow2); }
-
-  .product-img-wrap {
-    width: 100%; aspect-ratio: 4/3; overflow: hidden;
-    background: var(--card2); position: relative;
-  }
-  .product-img-wrap img {
-    width: 100%; height: 100%; object-fit: cover;
-    display: block; transition: transform 0.5s;
-  }
-  .product-card:hover .product-img-wrap img { transform: scale(1.06); }
-
-  .product-info { padding: 18px 20px 20px; }
-  .product-name { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: var(--white); letter-spacing: 1px; margin-bottom: 6px; }
-  .product-desc { font-size: 12px; color: var(--gray); margin-bottom: 14px; line-height: 1.5; }
-  .product-price { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--gold); margin-bottom: 14px; }
-
-  /* ── INSTALLATION ── */
-  #installation { background: var(--black); }
-  .install-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-
-  .install-left {}
-  .install-feature-img {
-    width: 100%; border-radius: 16px; overflow: hidden;
-    margin-bottom: 32px; border: 1px solid var(--border);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  }
-  .install-feature-img img { width: 100%; display: block; object-fit: cover; aspect-ratio: 16/10; }
-
-  .install-steps { display: flex; flex-direction: column; gap: 20px; }
-  .install-step { display: flex; gap: 18px; align-items: flex-start; }
-  .step-num {
-    width: 42px; height: 42px; min-width: 42px;
-    background: rgba(245,197,24,0.1); border: 1px solid rgba(245,197,24,0.3);
-    border-radius: 8px; display: flex; align-items: center; justify-content: center;
-    font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--gold);
-  }
-  .step-info h4 { font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; color: var(--white); letter-spacing: 1px; margin-bottom: 3px; }
-  .step-info p { font-size: 13px; color: var(--gray); line-height: 1.5; }
-
-  .install-form { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 36px 32px; }
-  .form-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; color: var(--white); margin-bottom: 6px; }
-  .form-sub { font-size: 13px; color: var(--gray); margin-bottom: 28px; }
-
-  .form-group { margin-bottom: 18px; }
-  .form-group label { display: block; font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 8px; }
-  .form-group input, .form-group select, .form-group textarea {
-    width: 100%; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px; padding: 12px 16px; color: var(--white);
-    font-family: 'Exo 2', sans-serif; font-size: 14px; outline: none; transition: all 0.3s; appearance: none;
-  }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    border-color: var(--gold); background: rgba(245,197,24,0.03); box-shadow: 0 0 0 3px rgba(245,197,24,0.1);
-  }
-  .form-group select option { background: var(--card); }
-  .form-group textarea { resize: vertical; min-height: 80px; }
-
-  /* ── PAIEMENT ── */
-  #paiement { background: var(--deep); }
-  .paiement-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 36px; }
-
-  .pay-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 16px; padding: 32px 24px; text-align: center;
-    transition: all 0.4s; position: relative; overflow: hidden;
-  }
-  .pay-card:hover { border-color: rgba(245,197,24,0.4); transform: translateY(-6px); box-shadow: var(--glow2); }
-  .pay-icon { font-size: 44px; margin-bottom: 16px; display: block; }
-  .pay-name { font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 700; color: var(--white); letter-spacing: 1px; margin-bottom: 8px; }
-  .pay-desc { font-size: 13px; color: var(--gray); line-height: 1.5; }
-
-  .pay-notice {
-    background: rgba(245,197,24,0.08); border: 1px solid rgba(245,197,24,0.2);
-    border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px;
-  }
-  .pay-notice-icon { font-size: 28px; min-width: 28px; }
-  .pay-notice-text { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; }
-  .pay-notice-text strong { color: var(--gold); }
-
-  /* ── CONTACT ── */
-  #contact { background: var(--black); }
-  .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-  .contact-info { display: flex; flex-direction: column; gap: 20px; }
-
-  .contact-item {
-    display: flex; align-items: flex-start; gap: 16px; padding: 18px 20px;
-    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-    transition: all 0.3s; text-decoration: none; color: var(--white);
-  }
-  .contact-item:hover { border-color: rgba(245,197,24,0.4); transform: translateX(6px); }
-  .contact-item-icon {
-    width: 44px; height: 44px; min-width: 44px;
-    background: rgba(245,197,24,0.1); border: 1px solid rgba(245,197,24,0.2);
-    border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px;
-  }
-  .contact-item-info h4 { font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; }
-  .contact-item-info p { font-size: 15px; color: var(--white); }
-  .contact-item-info small { font-size: 12px; color: var(--gray); }
-
-  .contact-service-img {
-    width: 100%; border-radius: 16px; overflow: hidden;
-    border: 1px solid var(--border); margin-bottom: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  }
-  .contact-service-img img { width: 100%; display: block; object-fit: cover; aspect-ratio: 16/9; }
-
-  .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .social-btn {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    padding: 12px; background: var(--card); border: 1px solid var(--border);
-    border-radius: 8px; color: var(--gray); text-decoration: none;
-    font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600;
-    letter-spacing: 1px; transition: all 0.3s;
-  }
-  .social-btn:hover { border-color: rgba(245,197,24,0.4); color: var(--gold); }
-
-  /* ── FOOTER ── */
-  footer { background: var(--card); border-top: 1px solid var(--border); padding: 50px 5% 30px; }
-  .footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-  .footer-brand p { font-size: 13px; color: var(--gray); line-height: 1.7; margin: 16px 0; }
-  .footer-col h4 { font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
-  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .footer-col ul a { font-size: 13px; color: var(--gray); text-decoration: none; transition: color 0.2s; }
-  .footer-col ul a:hover { color: var(--white); }
-  .footer-bottom {
-    border-top: 1px solid var(--border); padding-top: 24px;
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
-  }
-  .footer-bottom p { font-size: 12px; color: var(--gray); }
-  .footer-bottom span { color: var(--gold); }
-
-  /* ── WHATSAPP ── */
-  .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 500; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
-  .wa-tooltip {
-    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
-    padding: 10px 16px; font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600;
-    color: var(--white); white-space: nowrap; opacity: 0; transform: translateX(10px);
-    transition: all 0.3s; pointer-events: none;
-  }
-  .wa-float:hover .wa-tooltip { opacity: 1; transform: translateX(0); }
-  .wa-btn {
-    width: 60px; height: 60px; background: #25D366; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; font-size: 28px;
-    text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-    animation: wa-pulse 2s ease-in-out infinite; transition: transform 0.2s;
-  }
-  .wa-btn:hover { transform: scale(1.1); }
-  @keyframes wa-pulse {
-    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
-    50% { box-shadow: 0 4px 40px rgba(37,211,102,0.7); }
-  }
-
-  /* ── MOBILE NAV ── */
-  .mobile-menu {
-    display: none; position: fixed; inset: 70px 0 0 0;
-    background: rgba(5,5,5,0.98); backdrop-filter: blur(20px); z-index: 999;
-    flex-direction: column; align-items: center; justify-content: center; gap: 28px; padding: 40px;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 4px; color: var(--white); text-decoration: none; transition: color 0.2s; }
-  .mobile-menu a:hover { color: var(--gold); }
-
-  /* ── REVEAL ── */
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 960px) {
-    .install-wrap, .contact-wrap { grid-template-columns: 1fr; gap: 40px; }
-    .footer-main { grid-template-columns: 1fr 1fr; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-  }
-  @media (max-width: 600px) {
-    section { padding: 60px 5%; }
-    .hero-content { padding-top: 90px; padding-bottom: 50px; }
-    .hero-stats { gap: 20px; }
-    .footer-main { grid-template-columns: 1fr; }
-    .install-form { padding: 24px 20px; }
-    .offres-grid, .boutique-grid { grid-template-columns: 1fr; }
-  }
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media(max-width:960px){
+  .install-wrap,.contact-wrap,.sim-wrap{grid-template-columns:1fr;gap:36px}
+  .footer-main{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .sim-result{position:static}
+}
+@media(max-width:600px){
+  section{padding:60px 5%}
+  .hero-content{padding-top:90px;padding-bottom:50px}
+  .hero-stats{gap:20px}
+  .footer-main{grid-template-columns:1fr}
+  .install-form{padding:24px 20px}
+  .offres-grid,.boutique-grid{grid-template-columns:1fr}
+  .sim-options{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ═══════════ NAV ═══════════ -->
 <nav id="navbar">
   <a href="#accueil" class="logo">
     <img class="logo-img" src="https://i.ibb.co/5gtmLLSL/B6-FDC077-2-B53-4-F93-8161-36062-EE5-DC6-A.jpg" alt="VISION+ STORE Logo">
@@ -501,85 +512,68 @@
   <ul class="nav-links">
     <li><a href="#accueil">Accueil</a></li>
     <li><a href="#offres">Offres</a></li>
+    <li><a href="#simulateur">Simulateur</a></li>
     <li><a href="#boutique">Boutique</a></li>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#paiement">Paiement</a></li>
+    <li><a href="#sport">Sport</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#accueil" onclick="toggleMenu()">Accueil</a>
-  <a href="#offres" onclick="toggleMenu()">Offres</a>
-  <a href="#boutique" onclick="toggleMenu()">Boutique</a>
-  <a href="#installation" onclick="toggleMenu()">Installation</a>
-  <a href="#paiement" onclick="toggleMenu()">Paiement</a>
-  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="#accueil" onclick="closeMenu()">Accueil</a>
+  <a href="#offres" onclick="closeMenu()">Offres</a>
+  <a href="#simulateur" onclick="closeMenu()">Simulateur</a>
+  <a href="#boutique" onclick="closeMenu()">Boutique</a>
+  <a href="#sport" onclick="closeMenu()">Sport Live</a>
+  <a href="#avis" onclick="closeMenu()">Avis Clients</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
-<!-- HERO -->
+<!-- ═══════════ HERO ═══════════ -->
 <section id="accueil" class="hero">
   <div class="hero-cover"></div>
   <div class="hero-cover-overlay"></div>
   <div class="hero-grid"></div>
-
   <div class="hero-content">
     <div class="hero-badge">🇨🇲 Revendeur officiel CANAL+ au Cameroun</div>
     <img class="hero-logo-img" src="https://i.ibb.co/5gtmLLSL/B6-FDC077-2-B53-4-F93-8161-36062-EE5-DC6-A.jpg" alt="VISION+ STORE">
-    <h1 class="hero-title">
-      VISION+<br>
-      <span>STORE</span>
-    </h1>
+    <h1 class="hero-title">VISION+<br><span>STORE</span></h1>
     <p class="hero-slogan">"Tout ce que vous cherchez, <em>nous l'avons.</em>"</p>
-    <p class="hero-desc">
-      Votre partenaire de confiance pour l'accès aux offres CANAL+ au Cameroun.
-      Décodeurs, abonnements, installation à domicile — paiement à la livraison.
-    </p>
+    <p class="hero-desc">Votre partenaire de confiance pour l'accès aux offres CANAL+ au Cameroun. Décodeurs, abonnements, installation à domicile — paiement à la livraison.</p>
     <div class="hero-btns">
-      <a href="#offres" class="btn-primary">▶ Voir les offres</a>
+      <a href="#simulateur" class="btn-primary">🧮 Simuler mon tarif</a>
       <a href="https://wa.me/237655069396" target="_blank" class="btn-secondary">💬 WhatsApp</a>
     </div>
     <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">4+</div>
-        <div class="stat-label">Bouquets</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">24h</div>
-        <div class="stat-label">Installation</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">3</div>
-        <div class="stat-label">Modes paiement</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">✓</div>
-        <div class="stat-label">Livraison</div>
-      </div>
+      <div class="stat"><div class="stat-num">4+</div><div class="stat-label">Bouquets</div></div>
+      <div class="stat"><div class="stat-num">24h</div><div class="stat-label">Installation</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Paiements</div></div>
+      <div class="stat"><div class="stat-num">✓</div><div class="stat-label">Livraison</div></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- ═══════════ SERVICES ═══════════ -->
 <section id="services">
   <div class="section-label">Nos Services</div>
   <h2 class="section-title">CE QUE NOUS <span>OFFRONS</span></h2>
   <p class="section-desc">Un service complet pour votre expérience CANAL+ — de la commande à l'installation professionnelle.</p>
   <div class="services-grid">
-
     <div class="service-card reveal">
       <img class="service-img" src="https://i.ibb.co/hxgKhczS/IMG-5605.jpg" alt="Abonnements CANAL+" loading="lazy">
       <div class="service-body">
         <div class="service-icon">📡</div>
         <div class="service-name">Abonnements CANAL+</div>
-        <p class="service-desc">Tous les bouquets CANAL+ disponibles au meilleur prix. Activation rapide dès réception du paiement.</p>
+        <p class="service-desc">Tous les bouquets disponibles au meilleur prix. Activation rapide dès réception du paiement.</p>
       </div>
     </div>
-
     <div class="service-card reveal reveal-delay-1">
       <img class="service-img" src="https://i.ibb.co/1GZk0LkS/IMG-5631.jpg" alt="Vente de Décodeurs" loading="lazy">
       <div class="service-body">
@@ -588,7 +582,6 @@
         <p class="service-desc">Décodeurs CANAL+ neufs avec garantie. Livraison à domicile disponible sur Yaoundé et environs.</p>
       </div>
     </div>
-
     <div class="service-card reveal reveal-delay-2">
       <img class="service-img" src="https://i.ibb.co/2YYdzZSj/IMG-5633.jpg" alt="Installation à Domicile" loading="lazy">
       <div class="service-body">
@@ -597,7 +590,6 @@
         <p class="service-desc">Techniciens qualifiés pour l'installation complète de votre antenne et décodeur chez vous.</p>
       </div>
     </div>
-
     <div class="service-card reveal reveal-delay-3">
       <img class="service-img" src="https://i.ibb.co/gFTyx0hD/IMG-5634.jpg" alt="Support Client" loading="lazy">
       <div class="service-body">
@@ -606,17 +598,17 @@
         <p class="service-desc">Assistance rapide via WhatsApp. Nous répondons à toutes vos questions en temps réel.</p>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- OFFRES -->
+<!-- ═══════════ OFFRES ═══════════ -->
 <section id="offres">
   <div class="section-label">Bouquets CANAL+</div>
   <h2 class="section-title">NOS <span>OFFRES</span></h2>
-  <p class="section-desc">Choisissez le bouquet qui correspond à vos envies et votre budget. Tous disponibles immédiatement.</p>
+  <p class="section-desc">Choisissez le bouquet qui correspond à vos envies et votre budget. Cliquez sur "Voir les chaînes" pour découvrir le contenu.</p>
   <div class="offres-grid">
 
+    <!-- ACCESS -->
     <div class="offre-card reveal">
       <img class="offre-img" src="https://i.ibb.co/hxgKhczS/IMG-5605.jpg" alt="Bouquet ACCESS" loading="lazy">
       <div class="offre-header">
@@ -634,10 +626,12 @@
         <li>Films & séries sélection</li>
       </ul>
       <div class="offre-footer">
-        <a href="https://wa.me/237655069396?text=Bonjour VISION%2B STORE, je souhaite souscrire au bouquet ACCESS à 5000 FCFA" target="_blank" class="btn-primary" style="width:100%;justify-content:center;">Commander</a>
+        <button class="btn-chains" onclick="openChainesModal('ACCESS')">📺 Voir les chaînes incluses</button>
+        <a href="https://wa.me/237655069396?text=Bonjour%20VISION%2B%20STORE%2C%20je%20souhaite%20souscrire%20au%20bouquet%20ACCESS%20%C3%A0%205000%20FCFA" target="_blank" class="btn-primary" style="width:100%;justify-content:center;">Commander</a>
       </div>
     </div>
 
+    <!-- EVASION -->
     <div class="offre-card reveal reveal-delay-1">
       <img class="offre-img" src="https://i.ibb.co/vvQRpwk6/IMG-5605.jpg" alt="Bouquet EVASION" loading="lazy">
       <div class="offre-header">
@@ -655,10 +649,12 @@
         <li>Chaînes musicales</li>
       </ul>
       <div class="offre-footer">
-        <a href="https://wa.me/237655069396?text=Bonjour VISION%2B STORE, je souhaite souscrire au bouquet EVASION à 10500 FCFA" target="_blank" class="btn-primary" style="width:100%;justify-content:center;">Commander</a>
+        <button class="btn-chains" onclick="openChainesModal('EVASION')">📺 Voir les chaînes incluses</button>
+        <a href="https://wa.me/237655069396?text=Bonjour%20VISION%2B%20STORE%2C%20je%20souhaite%20souscrire%20au%20bouquet%20EVASION%20%C3%A0%2010500%20FCFA" target="_blank" class="btn-primary" style="width:100%;justify-content:center;">Commander</a>
       </div>
     </div>
 
+    <!-- ACCESS+ FEATURED -->
     <div class="offre-card featured reveal reveal-delay-2">
       <div class="offre-badge-top">⭐ Populaire</div>
       <img class="offre-img" src="https://i.ibb.co/ycQCZ7SW/IMG-5605.jpg" alt="Bouquet ACCESS+" loading="lazy">
@@ -678,10 +674,12 @@
         <li>Enfants & famille</li>
       </ul>
       <div class="offre-footer">
-        <a href="https://wa.me/237655069396?text=Bonjour VISION%2B STORE, je souhaite souscrire au bouquet ACCESS%2B à 15000 FCFA" target="_blank" class="btn-primary" style="width:100%;justify-content:center;">Commander</a>
+        <button class="btn-chains" onclick="openChainesModal('ACCESS+')">📺 Voir les chaînes incluses</button>
+        <a href="https://wa.me/237655069396?text=Bonjour%20VISION%2B%20STORE%2C%20je%20souhaite%20souscrire%20au%20bouquet%20ACCESS%2B%20%C3%A0%2015000%20FCFA" target="_blank" class="btn-primary" style="width:100%;justify-content:center;">Commander</a>
       </div>
     </div>
 
+    <!-- TOUT CANAL+ -->
     <div class="offre-card reveal reveal-delay-3">
       <div class="offre-badge-top" style="background:linear-gradient(90deg,#FFD700,#FFA500);color:#000;">👑 Premium</div>
       <img class="offre-img" src="https://i.ibb.co/1GZk0LkS/IMG-5631.jpg" alt="TOUT CANAL+" loading="lazy">
@@ -702,78 +700,254 @@
         <li>Service prioritaire</li>
       </ul>
       <div class="offre-footer">
-        <a href="https://wa.me/237655069396?text=Bonjour VISION%2B STORE, je souhaite souscrire au bouquet TOUT CANAL%2B à 28000 FCFA" target="_blank" class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(90deg,#F5C518,#FFD700);">Commander</a>
+        <button class="btn-chains" onclick="openChainesModal('TOUT CANAL+')">📺 Voir les chaînes incluses</button>
+        <a href="https://wa.me/237655069396?text=Bonjour%20VISION%2B%20STORE%2C%20je%20souhaite%20souscrire%20au%20bouquet%20TOUT%20CANAL%2B%20%C3%A0%2028000%20FCFA" target="_blank" class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(90deg,#F5C518,#FFD700);">Commander</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- BOUTIQUE -->
+<!-- ═══════════ SIMULATEUR ═══════════ -->
+<section id="simulateur">
+  <div class="section-label">Simulateur de Tarif</div>
+  <h2 class="section-title">CALCUL <span>INSTANTANÉ</span></h2>
+  <p class="section-desc">Configurez votre commande et obtenez votre devis en temps réel. Envoyez-le directement sur WhatsApp.</p>
+  <div class="sim-wrap">
+
+    <div class="sim-panel reveal">
+      <div class="sim-title">VOTRE COMMANDE</div>
+      <p class="sim-sub">Sélectionnez votre bouquet et les options souhaitées.</p>
+
+      <div class="sim-row">
+        <label>1. Choisissez votre bouquet</label>
+        <div class="sim-options">
+          <div class="sim-opt active" data-bouquet="ACCESS" data-price="5000" onclick="selectOpt(this,'bouquet')">ACCESS<br><small style="color:var(--gold);font-size:11px">5 000 F</small></div>
+          <div class="sim-opt" data-bouquet="EVASION" data-price="10500" onclick="selectOpt(this,'bouquet')">EVASION<br><small style="color:var(--gold);font-size:11px">10 500 F</small></div>
+          <div class="sim-opt" data-bouquet="ACCESS+" data-price="15000" onclick="selectOpt(this,'bouquet')">ACCESS+<br><small style="color:var(--gold);font-size:11px">15 000 F</small></div>
+          <div class="sim-opt" data-bouquet="TOUT CANAL+" data-price="28000" onclick="selectOpt(this,'bouquet')">TOUT CANAL+<br><small style="color:var(--gold);font-size:11px">28 000 F</small></div>
+        </div>
+      </div>
+
+      <div class="sim-row">
+        <label>2. Durée de l'abonnement</label>
+        <div class="sim-options">
+          <div class="sim-opt active" data-duree="1 mois" data-mult="1" onclick="selectOpt(this,'duree')">1 mois</div>
+          <div class="sim-opt" data-duree="3 mois" data-mult="3" onclick="selectOpt(this,'duree')">3 mois</div>
+          <div class="sim-opt" data-duree="6 mois" data-mult="6" onclick="selectOpt(this,'duree')">6 mois</div>
+          <div class="sim-opt" data-duree="12 mois" data-mult="12" onclick="selectOpt(this,'duree')">12 mois</div>
+        </div>
+      </div>
+
+      <div class="sim-row">
+        <label>3. Options supplémentaires</label>
+        <label class="sim-checkbox-row">
+          <input type="checkbox" id="opt-deco" data-price="25000" onchange="updateSim()">
+          <span>📦 Décodeur CANAL+ neuf</span>
+          <span class="chip">+25 000 F</span>
+        </label>
+        <label class="sim-checkbox-row">
+          <input type="checkbox" id="opt-install" data-price="5000" onchange="updateSim()">
+          <span>🔧 Installation à domicile</span>
+          <span class="chip">+5 000 F</span>
+        </label>
+        <label class="sim-checkbox-row">
+          <input type="checkbox" id="opt-telecom" data-price="3000" onchange="updateSim()">
+          <span>🎮 Télécommande de rechange</span>
+          <span class="chip">+3 000 F</span>
+        </label>
+        <label class="sim-checkbox-row">
+          <input type="checkbox" id="opt-parab" data-price="8000" onchange="updateSim()">
+          <span>📡 Parabole satellite</span>
+          <span class="chip">+8 000 F</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="sim-result reveal reveal-delay-1">
+      <div class="sim-result-label">Votre devis</div>
+      <div class="sim-bouquet-name" id="sim-bouquet-display">ACCESS</div>
+      <div class="sim-total" id="sim-total">5 000</div>
+      <div class="sim-total-label">FCFA — <span id="sim-duree-display">1 mois</span></div>
+      <ul class="sim-items" id="sim-items"></ul>
+      <a href="#" class="sim-wa-btn" id="sim-wa-link" target="_blank">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Envoyer mon devis sur WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BOUTIQUE ═══════════ -->
 <section id="boutique">
   <div class="section-label">Boutique</div>
   <h2 class="section-title">NOS <span>PRODUITS</span></h2>
   <p class="section-desc">Décodeurs, télécommandes et accessoires CANAL+ — disponibles à la vente avec livraison à domicile.</p>
   <div class="boutique-grid">
-
     <div class="product-card reveal">
-      <div class="product-img-wrap">
-        <img src="https://i.ibb.co/1GZk0LkS/IMG-5631.jpg" alt="Kit Complet CANAL+" loading="lazy">
-      </div>
+      <div class="product-img-wrap"><img src="https://i.ibb.co/1GZk0LkS/IMG-5631.jpg" alt="Kit Complet CANAL+" loading="lazy"></div>
       <div class="product-info">
         <div class="product-name">Kit Complet CANAL+</div>
-        <div class="product-desc">Kit complet incluant décodeur, antenne parabolique et accessoires d'installation. Prêt à l'emploi.</div>
+        <div class="product-desc">Décodeur, antenne parabolique et accessoires d'installation. Prêt à l'emploi.</div>
         <div class="product-price">Prix sur demande</div>
-        <a href="https://wa.me/237655069396?text=Bonjour, je voudrais commander un Kit Complet CANAL%2B" target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:10px 20px;">Commander</a>
+        <a href="https://wa.me/237655069396?text=Bonjour%2C%20je%20voudrais%20commander%20un%20Kit%20Complet%20CANAL%2B" target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:10px 20px;">Commander</a>
       </div>
     </div>
-
     <div class="product-card reveal reveal-delay-1">
-      <div class="product-img-wrap">
-        <img src="https://i.ibb.co/f3rBGGM/IMG-5629.jpg" alt="Télécommande CANAL+" loading="lazy">
-      </div>
+      <div class="product-img-wrap"><img src="https://i.ibb.co/f3rBGGM/IMG-5629.jpg" alt="Télécommande CANAL+" loading="lazy"></div>
       <div class="product-info">
         <div class="product-name">Télécommande CANAL+</div>
         <div class="product-desc">Télécommande universelle CANAL+ originale, compatible avec tous les modèles de décodeurs.</div>
         <div class="product-price">Prix sur demande</div>
-        <a href="https://wa.me/237655069396?text=Bonjour, je voudrais commander une télécommande CANAL%2B" target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:10px 20px;">Commander</a>
+        <a href="https://wa.me/237655069396?text=Bonjour%2C%20je%20voudrais%20commander%20une%20t%C3%A9l%C3%A9commande%20CANAL%2B" target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:10px 20px;">Commander</a>
       </div>
     </div>
-
     <div class="product-card reveal reveal-delay-2">
-      <div class="product-img-wrap">
-        <img src="https://i.ibb.co/3YWrVK8r/IMG-5632.jpg" alt="Parabole Satellite" loading="lazy">
-      </div>
+      <div class="product-img-wrap"><img src="https://i.ibb.co/3YWrVK8r/IMG-5632.jpg" alt="Parabole Satellite" loading="lazy"></div>
       <div class="product-info">
         <div class="product-name">Parabole Satellite</div>
-        <div class="product-desc">Antennes paraboliques haute qualité, disponibles en différentes tailles pour une réception optimale.</div>
+        <div class="product-desc">Antennes paraboliques haute qualité, différentes tailles pour une réception optimale.</div>
         <div class="product-price">Prix sur demande</div>
-        <a href="https://wa.me/237655069396?text=Bonjour, je voudrais des informations sur les paraboles satellites" target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:10px 20px;">Commander</a>
+        <a href="https://wa.me/237655069396?text=Bonjour%2C%20je%20voudrais%20des%20informations%20sur%20les%20paraboles" target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:10px 20px;">Commander</a>
       </div>
     </div>
-
     <div class="product-card reveal reveal-delay-3">
-      <div class="product-img-wrap">
-        <img src="https://i.ibb.co/hxgKhczS/IMG-5605.jpg" alt="Abonnement ACCESS" loading="lazy">
-      </div>
+      <div class="product-img-wrap"><img src="https://i.ibb.co/hxgKhczS/IMG-5605.jpg" alt="Abonnement ACCESS" loading="lazy"></div>
       <div class="product-info">
         <div class="product-name">Abonnement ACCESS</div>
-        <div class="product-desc">Carte d'abonnement ACCESS à partir de 5 000 FCFA/mois. Activation immédiate après paiement.</div>
+        <div class="product-desc">Carte d'abonnement ACCESS. Activation immédiate après paiement confirmé.</div>
         <div class="product-price">Dès 5 000 FCFA</div>
-        <a href="https://wa.me/237655069396?text=Bonjour, je voudrais souscrire à un abonnement CANAL%2B" target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:10px 20px;">Commander</a>
+        <a href="https://wa.me/237655069396?text=Bonjour%2C%20je%20voudrais%20souscrire%20%C3%A0%20un%20abonnement%20CANAL%2B" target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:10px 20px;">Commander</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SPORT / FOMO ═══════════ -->
+<section id="sport">
+  <div class="sport-header">
+    <div>
+      <div class="section-label">Ne ratez rien</div>
+      <h2 class="section-title">SPORT EN <span>DIRECT</span></h2>
+      <p class="section-desc" style="margin-bottom:0">Les grands événements de la semaine sur CANAL+. Abonnez-vous maintenant pour ne pas les manquer.</p>
+    </div>
+    <div class="live-badge">🔴 Cette semaine</div>
+  </div>
+  <div class="sport-grid" id="sportGrid">
+    <!-- Filled by JS -->
+  </div>
+  <div class="sport-urgency reveal" style="margin-top:32px">
+    <div class="sport-urgency-icon">⚡</div>
+    <p><strong style="color:var(--gold)">Ne manquez plus jamais un match !</strong> Souscrivez dès maintenant — notre équipe active votre bouquet en moins de <strong>2 heures</strong>. Paiement après livraison, <strong>zéro risque.</strong></p>
+  </div>
+</section>
+
+<!-- ═══════════ AVIS CLIENTS ═══════════ -->
+<section id="avis">
+  <div class="section-label">Témoignages</div>
+  <h2 class="section-title">ILS NOUS <span>FONT CONFIANCE</span></h2>
+  <p class="section-desc">Des centaines de clients satisfaits à Yaoundé et dans les environs. Voici leurs retours réels.</p>
+  <div class="avis-grid">
+
+    <div class="avis-card reveal">
+      <div class="avis-bouquet">ACCESS+</div>
+      <div class="avis-wa-header">
+        <div class="avis-avatar">M</div>
+        <div>
+          <div class="avis-name">Martin Essomba</div>
+          <div class="avis-sub">Bastos, Yaoundé</div>
+        </div>
+        <div class="avis-wa-icon">💬</div>
+      </div>
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">"Service impeccable ! Le technicien est venu le jour même, installation parfaite. Je recommande VISION+ STORE à toute ma famille. Prix honnête et paiement après vérification, rien à redire."</p>
+      <div class="avis-date">📅 Il y a 3 jours · via WhatsApp</div>
+    </div>
+
+    <div class="avis-card reveal reveal-delay-1">
+      <div class="avis-bouquet">TOUT CANAL+</div>
+      <div class="avis-wa-header">
+        <div class="avis-avatar" style="background:linear-gradient(135deg,#F5C518,#C9A000);">A</div>
+        <div>
+          <div class="avis-name">Ange Nkolo</div>
+          <div class="avis-sub">Melen, Yaoundé</div>
+        </div>
+        <div class="avis-wa-icon">💬</div>
+      </div>
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">"J'avais peur de me faire arnaquer en commandant en ligne, mais VISION+ STORE m'a convaincu. Livraison rapide, produit neuf avec garantie, et j'ai payé seulement après avoir tout testé. Bravo !"</p>
+      <div class="avis-date">📅 Il y a 1 semaine · via WhatsApp</div>
+    </div>
+
+    <div class="avis-card reveal reveal-delay-2">
+      <div class="avis-bouquet">EVASION</div>
+      <div class="avis-wa-header">
+        <div class="avis-avatar" style="background:linear-gradient(135deg,#6c63ff,#3f3d99);">C</div>
+        <div>
+          <div class="avis-name">Chantal Mbida</div>
+          <div class="avis-sub">Essos, Yaoundé</div>
+        </div>
+        <div class="avis-wa-icon">💬</div>
+      </div>
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">"Commande via WhatsApp le matin, décodeur installé le soir même. J'ai payé par Orange Money après installation. Mon mari et mes enfants sont contents. Merci VISION+ STORE !"</p>
+      <div class="avis-date">📅 Il y a 2 semaines · via WhatsApp</div>
+    </div>
+
+    <div class="avis-card reveal reveal-delay-3">
+      <div class="avis-bouquet">ACCESS</div>
+      <div class="avis-wa-header">
+        <div class="avis-avatar" style="background:linear-gradient(135deg,#e74c3c,#8e0000);">P</div>
+        <div>
+          <div class="avis-name">Paul Onana</div>
+          <div class="avis-sub">Obili, Yaoundé</div>
+        </div>
+        <div class="avis-wa-icon">💬</div>
+      </div>
+      <div class="avis-stars">★★★★☆</div>
+      <p class="avis-text">"Très bon service. La télécommande était incluse, l'installation propre et rapide. Le seul bémol c'est que j'aurais voulu plus de chaînes — mais je vais prochainement passer à ACCESS+. Recommandé !"</p>
+      <div class="avis-date">📅 Il y a 1 mois · via WhatsApp</div>
+    </div>
+
+    <div class="avis-card reveal reveal-delay-1">
+      <div class="avis-bouquet">ACCESS+</div>
+      <div class="avis-wa-header">
+        <div class="avis-avatar" style="background:linear-gradient(135deg,#27ae60,#145a32);">B</div>
+        <div>
+          <div class="avis-name">Brigitte Ateba</div>
+          <div class="avis-sub">Ngousso, Yaoundé</div>
+        </div>
+        <div class="avis-wa-icon">💬</div>
+      </div>
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">"Je gère un cyber café et j'avais besoin de plusieurs décodeurs. VISION+ STORE a tout géré : livraison groupée, tarif négocié, installation pro. C'est mon partenaire CANAL+ désormais !"</p>
+      <div class="avis-date">📅 Il y a 3 semaines · via WhatsApp</div>
+    </div>
+
+    <div class="avis-card reveal reveal-delay-2">
+      <div class="avis-bouquet">TOUT CANAL+</div>
+      <div class="avis-wa-header">
+        <div class="avis-avatar" style="background:linear-gradient(135deg,#f39c12,#8e5e00);">J</div>
+        <div>
+          <div class="avis-name">Jean-Claude Tagne</div>
+          <div class="avis-sub">Omnisport, Yaoundé</div>
+        </div>
+        <div class="avis-wa-icon">💬</div>
+      </div>
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">"Le meilleur vendeur CANAL+ de Yaoundé ! J'ai pris TOUT CANAL+ pour suivre la Ligue des Champions. Activation le jour même, son image HD parfaite. Le service après-vente est aussi très réactif."</p>
+      <div class="avis-date">📅 Il y a 5 jours · via WhatsApp</div>
     </div>
 
   </div>
 </section>
 
-<!-- INSTALLATION -->
+<!-- ═══════════ INSTALLATION ═══════════ -->
 <section id="installation">
   <div class="section-label">Installation à Domicile</div>
   <h2 class="section-title">INSTALLATION <span>RAPIDE</span></h2>
   <p class="section-desc">Nos techniciens se déplacent chez vous pour une installation professionnelle et rapide.</p>
   <div class="install-wrap">
-
     <div class="install-left">
       <div class="install-feature-img reveal">
         <img src="https://i.ibb.co/2YYdzZSj/IMG-5633.jpg" alt="Technicien VISION+ STORE" loading="lazy">
@@ -781,35 +955,22 @@
       <div class="install-steps">
         <div class="install-step reveal">
           <div class="step-num">01</div>
-          <div class="step-info">
-            <h4>Remplissez le formulaire</h4>
-            <p>Indiquez vos coordonnées, votre quartier et le type d'installation souhaitée.</p>
-          </div>
+          <div class="step-info"><h4>Remplissez le formulaire</h4><p>Indiquez vos coordonnées, votre quartier et le type d'installation souhaitée.</p></div>
         </div>
         <div class="install-step reveal reveal-delay-1">
           <div class="step-num">02</div>
-          <div class="step-info">
-            <h4>Confirmation par WhatsApp</h4>
-            <p>Nous vous contactons dans les plus brefs délais pour confirmer le rendez-vous.</p>
-          </div>
+          <div class="step-info"><h4>Confirmation par WhatsApp</h4><p>Nous vous contactons dans les plus brefs délais pour confirmer le rendez-vous.</p></div>
         </div>
         <div class="install-step reveal reveal-delay-2">
           <div class="step-num">03</div>
-          <div class="step-info">
-            <h4>Installation professionnelle</h4>
-            <p>Notre technicien se déplace et réalise l'installation complète chez vous.</p>
-          </div>
+          <div class="step-info"><h4>Installation professionnelle</h4><p>Notre technicien se déplace et réalise l'installation complète chez vous.</p></div>
         </div>
         <div class="install-step reveal reveal-delay-3">
           <div class="step-num">04</div>
-          <div class="step-info">
-            <h4>Paiement après vérification</h4>
-            <p>Vous payez uniquement après avoir vérifié que tout fonctionne parfaitement.</p>
-          </div>
+          <div class="step-info"><h4>Paiement après vérification</h4><p>Vous payez uniquement après avoir vérifié que tout fonctionne parfaitement.</p></div>
         </div>
       </div>
     </div>
-
     <div class="install-form reveal">
       <div class="form-title">DEMANDER UNE INSTALLATION</div>
       <p class="form-sub">Remplissez ce formulaire et nous vous recontactons rapidement.</p>
@@ -840,15 +1001,13 @@
           <label>Message (optionnel)</label>
           <textarea id="message" placeholder="Précisions supplémentaires..."></textarea>
         </div>
-        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
-          Envoyer via WhatsApp ▶
-        </button>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Envoyer via WhatsApp ▶</button>
       </form>
     </div>
   </div>
 </section>
 
-<!-- PAIEMENT -->
+<!-- ═══════════ PAIEMENT ═══════════ -->
 <section id="paiement">
   <div class="section-label">Modes de Paiement</div>
   <h2 class="section-title">PAIEMENT <span>FACILE</span></h2>
@@ -873,42 +1032,42 @@
   <div class="pay-notice reveal">
     <div class="pay-notice-icon">🛡️</div>
     <div class="pay-notice-text">
-      <strong>Garantie de satisfaction :</strong> Le client peut payer <strong>après livraison</strong> et vérification du produit. Votre satisfaction est notre priorité — vous ne payez que lorsque vous êtes pleinement satisfait de votre achat.
+      <strong>Garantie de satisfaction :</strong> Le client peut payer <strong>après livraison</strong> et vérification du produit. Votre satisfaction est notre priorité — vous ne payez que lorsque vous êtes pleinement satisfait.
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ═══════════ FAQ ═══════════ -->
+<section id="faq">
+  <div class="section-label">Questions Fréquentes</div>
+  <h2 class="section-title">FAQ <span>CLIENTS</span></h2>
+  <p class="section-desc">Toutes les réponses à vos questions avant de commander. Une autre question ? WhatsApp-nous !</p>
+  <div class="faq-list" id="faqList">
+    <!-- Filled by JS -->
+  </div>
+  <div style="margin-top:32px;text-align:center">
+    <a href="https://wa.me/237655069396?text=Bonjour%20VISION%2B%20STORE%2C%20j%27ai%20une%20question%20%3A%20" target="_blank" class="btn-secondary">💬 Poser une autre question sur WhatsApp</a>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
 <section id="contact">
   <div class="section-label">Contactez-nous</div>
   <h2 class="section-title">NOUS <span>CONTACTER</span></h2>
   <p class="section-desc">Disponibles 7j/7 pour répondre à toutes vos questions. Contactez-nous via WhatsApp pour une réponse rapide.</p>
   <div class="contact-wrap">
-
     <div class="contact-info">
       <a href="https://wa.me/237655069396" target="_blank" class="contact-item reveal">
         <div class="contact-item-icon">💬</div>
-        <div class="contact-item-info">
-          <h4>WhatsApp</h4>
-          <p>+237 655 069 396</p>
-          <small>Réponse rapide garantie</small>
-        </div>
+        <div class="contact-item-info"><h4>WhatsApp</h4><p>+237 655 069 396</p><small>Réponse rapide garantie</small></div>
       </a>
       <a href="tel:+237655069396" class="contact-item reveal reveal-delay-1">
         <div class="contact-item-icon">📞</div>
-        <div class="contact-item-info">
-          <h4>Appel direct</h4>
-          <p>+237 655 069 396</p>
-          <small>Disponible tous les jours</small>
-        </div>
+        <div class="contact-item-info"><h4>Appel direct</h4><p>+237 655 069 396</p><small>Disponible tous les jours</small></div>
       </a>
       <div class="contact-item reveal reveal-delay-2" style="cursor:default;">
         <div class="contact-item-icon">📍</div>
-        <div class="contact-item-info">
-          <h4>Localisation</h4>
-          <p>Yaoundé, Cameroun</p>
-          <small>Livraison sur Yaoundé et environs</small>
-        </div>
+        <div class="contact-item-info"><h4>Localisation</h4><p>Yaoundé, Cameroun</p><small>Livraison sur Yaoundé et environs</small></div>
       </div>
       <div class="social-grid reveal reveal-delay-3">
         <a href="https://wa.me/237655069396" target="_blank" class="social-btn">💬 WhatsApp</a>
@@ -917,23 +1076,22 @@
         <a href="#" class="social-btn">▶️ YouTube</a>
       </div>
     </div>
-
     <div class="reveal">
       <div class="contact-service-img">
         <img src="https://i.ibb.co/gFTyx0hD/IMG-5634.jpg" alt="Service Client VISION+ STORE" loading="lazy">
       </div>
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;">
-        <div style="font-size:32px;margin-bottom:12px;">📍</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--gold);margin-bottom:6px;">YAOUNDÉ, CAMEROUN</div>
-        <div style="font-size:13px;color:var(--gray);margin-bottom:16px;">VISION+ STORE • Livraison à domicile</div>
-        <a href="https://maps.google.com/?q=Yaoundé,Cameroun" target="_blank" class="btn-primary" style="justify-content:center;">Voir sur Google Maps →</a>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center">
+        <div style="font-size:32px;margin-bottom:12px">📍</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--gold);margin-bottom:6px">YAOUNDÉ, CAMEROUN</div>
+        <div style="font-size:13px;color:var(--gray);margin-bottom:16px">VISION+ STORE • Livraison à domicile</div>
+        <!-- ✅ Google Maps URL corrigée -->
+        <a href="https://www.google.com/maps/search/?api=1&query=Yaound%C3%A9+Cameroun" target="_blank" class="btn-primary" style="justify-content:center;">📍 Voir sur Google Maps</a>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══════════ FOOTER ═══════════ -->
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
@@ -951,9 +1109,9 @@
       <ul>
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#offres">Nos Offres</a></li>
+        <li><a href="#simulateur">Simulateur</a></li>
         <li><a href="#boutique">Boutique</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#paiement">Paiement</a></li>
+        <li><a href="#sport">Sport Live</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -970,13 +1128,14 @@
       <ul>
         <li><a href="https://wa.me/237655069396" target="_blank">💬 WhatsApp</a></li>
         <li><a href="tel:+237655069396">📞 655 069 396</a></li>
-        <li><a href="#">📘 Facebook</a></li>
-        <li><a href="#">📸 Instagram</a></li>
+        <li><a href="#faq">❓ FAQ</a></li>
+        <li><a href="#avis">⭐ Avis clients</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 <span>VISION+ STORE</span> — Tous droits réservés · Yaoundé, Cameroun</p>
+    <!-- ✅ Année dynamique JS -->
+    <p>© <span id="footer-year"></span> <span>VISION+ STORE</span> — Tous droits réservés · Yaoundé, Cameroun</p>
     <p>Revendeur CANAL+ au Cameroun · <span>+237 655 069 396</span></p>
   </div>
 </footer>
@@ -984,37 +1143,267 @@
 <!-- WHATSAPP FLOAT -->
 <div class="wa-float">
   <div class="wa-tooltip">Commander sur WhatsApp</div>
-  <a href="https://wa.me/237655069396?text=Bonjour VISION%2B STORE, je souhaite avoir des informations." target="_blank" class="wa-btn">
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
+  <a href="https://wa.me/237655069396?text=Bonjour%20VISION%2B%20STORE%2C%20je%20souhaite%20avoir%20des%20informations." target="_blank" class="wa-btn">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 </div>
 
+<!-- ═══════════ MODAL CHAÎNES ═══════════ -->
+<div class="modal-overlay" id="modalChaines" onclick="closeModalOutside(event,'modalChaines')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modalChaines')">✕</button>
+    <div class="modal-title" id="modal-chaines-title">ACCESS</div>
+    <div class="modal-sub" id="modal-chaines-sub">Chaînes incluses dans ce bouquet</div>
+    <div class="chains-grid" id="modal-chaines-grid"></div>
+    <div style="margin-top:24px">
+      <a href="#" id="modal-chaines-cta" target="_blank" class="btn-primary" style="width:100%;justify-content:center;">Commander ce bouquet sur WhatsApp</a>
+    </div>
+  </div>
+</div>
+
 <script>
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+/* ─────────────────────────────────────────
+   FOOTER YEAR (DYNAMIQUE)
+───────────────────────────────────────── */
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+/* ─────────────────────────────────────────
+   NAV SCROLL + HAMBURGER
+───────────────────────────────────────── */
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+let menuOpen = false;
+function toggleMenu() {
+  menuOpen = !menuOpen;
+  document.getElementById('mobileMenu').classList.toggle('open', menuOpen);
+  document.getElementById('hamburger').classList.toggle('open', menuOpen);
+}
+function closeMenu() {
+  menuOpen = false;
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+
+/* ─────────────────────────────────────────
+   REVEAL ON SCROLL
+───────────────────────────────────────── */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* ─────────────────────────────────────────
+   INSTALLATION FORM → WHATSAPP
+───────────────────────────────────────── */
+function submitForm(e) {
+  e.preventDefault();
+  const nom = document.getElementById('nom').value;
+  const tel = document.getElementById('tel').value;
+  const quartier = document.getElementById('quartier').value;
+  const type = document.getElementById('typeInstall').value;
+  const msg = document.getElementById('message').value;
+  const text = `Bonjour VISION+ STORE 👋\n\n*Demande d'installation*\n\n👤 Nom: ${nom}\n📞 Téléphone: ${tel}\n📍 Quartier: ${quartier}\n🔧 Type: ${type}${msg ? `\n💬 Message: ${msg}` : ''}\n\nMerci!`;
+  window.open(`https://wa.me/237655069396?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+/* ─────────────────────────────────────────
+   SIMULATEUR DE TARIF
+───────────────────────────────────────── */
+let simState = {
+  bouquet: 'ACCESS', bouquetPrice: 5000,
+  duree: '1 mois', mult: 1
+};
+
+function selectOpt(el, type) {
+  const siblings = el.parentElement.querySelectorAll('.sim-opt');
+  siblings.forEach(s => s.classList.remove('active'));
+  el.classList.add('active');
+  if (type === 'bouquet') {
+    simState.bouquet = el.dataset.bouquet;
+    simState.bouquetPrice = parseInt(el.dataset.price);
+  } else {
+    simState.duree = el.dataset.duree;
+    simState.mult = parseInt(el.dataset.mult);
+  }
+  updateSim();
+}
+
+function updateSim() {
+  const aboPrix = simState.bouquetPrice * simState.mult;
+  let total = aboPrix;
+  const items = [];
+  items.push({ label: `Abonnement ${simState.bouquet} × ${simState.mult}`, price: aboPrix });
+
+  const extras = [
+    { id: 'opt-deco', label: '📦 Décodeur CANAL+ neuf' },
+    { id: 'opt-install', label: '🔧 Installation à domicile' },
+    { id: 'opt-telecom', label: '🎮 Télécommande' },
+    { id: 'opt-parab', label: '📡 Parabole satellite' },
+  ];
+  extras.forEach(ex => {
+    const el = document.getElementById(ex.id);
+    if (el && el.checked) {
+      const p = parseInt(el.dataset.price);
+      total += p;
+      items.push({ label: ex.label, price: p });
+    }
   });
 
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
+  document.getElementById('sim-bouquet-display').textContent = simState.bouquet;
+  document.getElementById('sim-total').textContent = total.toLocaleString('fr-FR');
+  document.getElementById('sim-duree-display').textContent = simState.duree;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  const itemsEl = document.getElementById('sim-items');
+  itemsEl.innerHTML = items.map(i =>
+    `<li>${i.label} <span>${i.price.toLocaleString('fr-FR')} F</span></li>`
+  ).join('');
 
-  function submitForm(e) {
-    e.preventDefault();
-    const nom = document.getElementById('nom').value;
-    const tel = document.getElementById('tel').value;
-    const quartier = document.getElementById('quartier').value;
-    const type = document.getElementById('typeInstall').value;
-    const msg = document.getElementById('message').value;
-    const text = `Bonjour VISION+ STORE 👋\n\n*Demande d'installation*\n\n👤 Nom: ${nom}\n📞 Téléphone: ${tel}\n📍 Quartier: ${quartier}\n🔧 Type: ${type}${msg ? `\n💬 Message: ${msg}` : ''}\n\nMerci!`;
-    window.open(`https://wa.me/237655069396?text=${encodeURIComponent(text)}`, '_blank');
+  // WhatsApp message
+  const lines = items.map(i => `• ${i.label}: ${i.price.toLocaleString('fr-FR')} FCFA`).join('\n');
+  const msg = `Bonjour VISION+ STORE 👋\n\n*Mon devis personnalisé*\n\n${lines}\n\n💰 *TOTAL: ${total.toLocaleString('fr-FR')} FCFA*\n\nJe souhaite commander. Merci !`;
+  document.getElementById('sim-wa-link').href = `https://wa.me/237655069396?text=${encodeURIComponent(msg)}`;
+}
+
+updateSim(); // Initial render
+
+/* ─────────────────────────────────────────
+   ÉVÉNEMENTS SPORTIFS
+───────────────────────────────────────── */
+const sportEvents = [
+  { date: 'LUN 26 MAI', match: 'PSG vs Bayern Munich', comp: 'Ligue des Champions — Finale', time: '21h00', canal: 'beIN Sports / CANAL+ Sport' },
+  { date: 'MAR 27 MAI', match: 'Cameroun vs Sénégal', comp: 'Qualifications CAN 2026', time: '17h00', canal: 'CANAL+ Afrique' },
+  { date: 'MER 28 MAI', match: 'Real Madrid vs Arsenal', comp: 'Champions League', time: '21h00', canal: 'beIN Sports' },
+  { date: 'JEU 29 MAI', match: 'NBA Finals — Match 4', comp: 'NBA Playoffs 2025', time: '02h30', canal: 'Canal+ Sport 2' },
+  { date: 'VEN 30 MAI', match: 'Roland Garros — Demi-finales', comp: 'Grand Chelem Tennis', time: '11h00', canal: 'Eurosport / CANAL+' },
+  { date: 'SAM 31 MAI', match: 'Man City vs Liverpool', comp: 'Premier League — J38', time: '17h30', canal: 'beIN Sports' },
+];
+
+const grid = document.getElementById('sportGrid');
+sportEvents.forEach((ev, i) => {
+  grid.innerHTML += `
+    <div class="sport-card reveal${i>0?' reveal-delay-'+(i%4):''}">
+      <div class="sport-date">📅 ${ev.date}</div>
+      <div class="sport-match">${ev.match}</div>
+      <div class="sport-comp">${ev.comp}</div>
+      <div class="sport-time-chip">⏰ ${ev.time}</div>
+      <div class="sport-canal">📡 ${ev.canal}</div>
+      <div style="margin-top:14px">
+        <a href="https://wa.me/237655069396?text=Bonjour%2C%20je%20veux%20m%27abonner%20pour%20regarder%20${encodeURIComponent(ev.match)}" target="_blank" class="btn-primary" style="font-size:12px;padding:8px 16px;gap:6px;">📺 M'abonner pour ce match</a>
+      </div>
+    </div>`;
+});
+
+// Re-observe new sport cards
+document.querySelectorAll('.sport-card.reveal').forEach(el => observer.observe(el));
+
+/* ─────────────────────────────────────────
+   FAQ
+───────────────────────────────────────── */
+const faqs = [
+  { q: "Est-ce que je peux vraiment payer après réception du produit ?", a: "Oui, absolument ! Chez VISION+ STORE, vous payez uniquement après avoir reçu et vérifié votre produit ou votre installation. Vous pouvez tester le décodeur, vérifier la réception des chaînes, et payer seulement quand vous êtes pleinement satisfait." },
+  { q: "Quel bouquet me conseillez-vous pour suivre le football ?", a: "Pour le football, nous recommandons le bouquet ACCESS+ (15 000 FCFA/mois) qui inclut les grandes compétitions comme la CAN, la Ligue des Champions, la Premier League et la Ligue 1. Pour un accès complet incluant toutes les chaînes beIN Sports, optez pour TOUT CANAL+." },
+  { q: "Combien de temps prend l'installation à domicile ?", a: "L'installation à domicile prend généralement entre 30 minutes et 1 heure selon votre configuration. Nos techniciens interviennent en général dans les 24h suivant votre demande, souvent le jour même pour les commandes du matin." },
+  { q: "Comment se passe le paiement par Orange Money ou MTN MoMo ?", a: "Après livraison et vérification du produit, notre agent vous communique un numéro de transfert. Vous effectuez le virement depuis votre téléphone, et nous vous envoyons une confirmation immédiatement. Simple, rapide et sécurisé." },
+  { q: "Le décodeur est-il compatible avec mon téléviseur ?", a: "Oui ! Les décodeurs CANAL+ que nous vendons sont compatibles avec tous les téléviseurs, qu'ils soient modernes (HDMI) ou anciens (péritel/RCA). Si vous avez un doute, envoyez-nous une photo de votre TV sur WhatsApp et nous vous conseillons." },
+  { q: "Livrez-vous partout à Yaoundé ?", a: "Nous livrons dans tous les quartiers de Yaoundé : Bastos, Melen, Essos, Ngousso, Obili, Omnisport, Biyem-Assi, Mvog-Ada, et bien d'autres. Contactez-nous pour les zones périphériques — nous faisons notre maximum pour vous servir." },
+  { q: "Que se passe-t-il si mon décodeur tombe en panne ?", a: "Tous nos décodeurs sont vendus avec garantie. En cas de problème, contactez-nous sur WhatsApp et nous organisons une intervention rapide. Notre service après-vente est disponible 7j/7 pour vous assister." },
+  { q: "Puis-je renouveler mon abonnement directement via WhatsApp ?", a: "Bien sûr ! La majorité de nos clients renouvellent leur abonnement directement sur WhatsApp. Envoyez-nous un message avec votre nom et le bouquet souhaité, et votre abonnement est renouvelé en quelques minutes." },
+];
+
+const faqList = document.getElementById('faqList');
+faqs.forEach((faq, i) => {
+  faqList.innerHTML += `
+    <div class="faq-item reveal${i%3===1?' reveal-delay-1':i%3===2?' reveal-delay-2':''}">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">${faq.q}</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">${faq.a}</div>
+      </div>
+    </div>`;
+});
+document.querySelectorAll('.faq-item.reveal').forEach(el => observer.observe(el));
+
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ─────────────────────────────────────────
+   MODAL CHAÎNES
+───────────────────────────────────────── */
+const chainesData = {
+  'ACCESS': [
+    { icon: '📰', name: 'France 24' }, { icon: '📰', name: 'LCI' }, { icon: '📰', name: 'i24 News' },
+    { icon: '👶', name: 'Gulli' }, { icon: '👶', name: 'Tiji' }, { icon: '🎵', name: 'MTV Base' },
+    { icon: '🎬', name: 'AB1' }, { icon: '🎭', name: 'NT1' }, { icon: '🌍', name: 'Africa 24' },
+    { icon: '📺', name: 'CRTV' }, { icon: '🌐', name: 'BBC World' }, { icon: '📡', name: 'DW' },
+  ],
+  'EVASION': [
+    { icon: '📰', name: 'France 24' }, { icon: '📰', name: 'LCI' }, { icon: '👶', name: 'Gulli' },
+    { icon: '⚽', name: 'Equidia' }, { icon: '🎬', name: 'Ciné+' }, { icon: '🎵', name: 'MTV' },
+    { icon: '🏀', name: 'Sport+' }, { icon: '🎭', name: 'Comédie+' }, { icon: '🌍', name: 'Africa 24' },
+    { icon: '🔍', name: 'National Geo' }, { icon: '🎬', name: 'TCM Cinéma' }, { icon: '📺', name: 'TF1 Séries' },
+    { icon: '🎸', name: 'MTV Hits' }, { icon: '📡', name: 'Trace Africa' }, { icon: '🏋️', name: 'Extreme' },
+  ],
+  'ACCESS+': [
+    { icon: '📰', name: 'France 24' }, { icon: '👶', name: 'Gulli' }, { icon: '⚽', name: 'beIN Sports' },
+    { icon: '⚽', name: 'beIN Sports 2' }, { icon: '🏀', name: 'NBA League' }, { icon: '🎬', name: 'Ciné+' },
+    { icon: '🎬', name: 'Ciné+ Premier' }, { icon: '🎭', name: 'Canal+ Séries' }, { icon: '🔍', name: 'National Geo' },
+    { icon: '🐾', name: 'Nat Geo Wild' }, { icon: '🌍', name: 'Planète+' }, { icon: '👶', name: 'Disney Junior' },
+    { icon: '📺', name: 'Melody' }, { icon: '🎸', name: 'MTV Base' }, { icon: '📡', name: 'Trace' },
+    { icon: '🎯', name: 'Eurosport' }, { icon: '⚽', name: 'Equidia' }, { icon: '🏋️', name: 'Extreme' },
+  ],
+  'TOUT CANAL+': [
+    { icon: '⭐', name: 'CANAL+' }, { icon: '⭐', name: 'CANAL+ Décalé' }, { icon: '⭐', name: 'CANAL+ Séries' },
+    { icon: '⚽', name: 'beIN Sports 1' }, { icon: '⚽', name: 'beIN Sports 2' }, { icon: '⚽', name: 'beIN Sports 3' },
+    { icon: '🏀', name: 'NBA League' }, { icon: '🎬', name: 'Ciné+ Premier' }, { icon: '🎬', name: 'Ciné+ Frisson' },
+    { icon: '🎬', name: 'Ciné+ Club' }, { icon: '🎬', name: 'Ciné+ Famiz' }, { icon: '🎭', name: 'Canal+ Hits' },
+    { icon: '🔍', name: 'Nat Geo' }, { icon: '🐾', name: 'Nat Geo Wild' }, { icon: '🌍', name: 'Planète+' },
+    { icon: '👶', name: 'Disney Junior' }, { icon: '👶', name: 'Disney Channel' }, { icon: '👶', name: 'Gulli' },
+    { icon: '🎯', name: 'Eurosport 1' }, { icon: '🎯', name: 'Eurosport 2' }, { icon: '📺', name: 'Trace Africa' },
+    { icon: '🎸', name: 'MTV' }, { icon: '📡', name: '4K Channel' }, { icon: '+', name: '100+ chaînes' },
+  ],
+};
+
+const ctaLinks = {
+  'ACCESS': 'Bonjour%20VISION%2B%20STORE%2C%20je%20souhaite%20souscrire%20au%20bouquet%20ACCESS%20%C3%A0%205000%20FCFA',
+  'EVASION': 'Bonjour%20VISION%2B%20STORE%2C%20je%20souhaite%20souscrire%20au%20bouquet%20EVASION%20%C3%A0%2010500%20FCFA',
+  'ACCESS+': 'Bonjour%20VISION%2B%20STORE%2C%20je%20souhaite%20souscrire%20au%20bouquet%20ACCESS%2B%20%C3%A0%2015000%20FCFA',
+  'TOUT CANAL+': 'Bonjour%20VISION%2B%20STORE%2C%20je%20souhaite%20souscrire%20au%20bouquet%20TOUT%20CANAL%2B%20%C3%A0%2028000%20FCFA',
+};
+
+function openChainesModal(bouquet) {
+  document.getElementById('modal-chaines-title').textContent = bouquet;
+  const chains = chainesData[bouquet] || [];
+  document.getElementById('modal-chaines-sub').textContent = `${chains.length} chaînes incluses dans ce bouquet`;
+  document.getElementById('modal-chaines-grid').innerHTML = chains.map(c =>
+    `<div class="chain-item"><span class="chain-icon">${c.icon}</span><div class="chain-name">${c.name}</div></div>`
+  ).join('');
+  document.getElementById('modal-chaines-cta').href = `https://wa.me/237655069396?text=${ctaLinks[bouquet]}`;
+  document.getElementById('modalChaines').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e, id) {
+  if (e.target.id === id) closeModal(id);
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModal('modalChaines');
   }
+});
 </script>
 </body>
 </html>
